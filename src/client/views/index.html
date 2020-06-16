@@ -3,65 +3,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
     <head>
         <meta charset="utf-8">
-        <title>Evaluate a news article or text with Aylient NLP</title>
+        <title>Travel Site</title>
     </head>
-
-    <body class="container">
-        <header>
-            <div class="blue-text lighten-3">
-                <h1 class="center-align">Udacity</h1>
-            </div>
-            <div>
-                <h4 class="center-align">Project-4 Evaluate a News Article with NLP</h4>
-            </div>
-        </header>
-
-        <main class="container grey-lighten-2">
-            <h4 class="center-align">Aylien Text Analysis API</h4>
-
-            <p>
-                AYLIEN Text API is a package of Natural Language Processing, Information Retrieval and Machine Learning tools that allow developers to extract meaning and insights from documents with ease.
-            </p>
-
-            <h5>Enter URL below to get the analysis</h5>
-    
-            <section>
-                <form class="" onsubmit="return Client.handleSubmit(event)">
-                    <div class="input-field">
-                    <input id="name" type="search" name="test-url" value=""  placeholder="https://www.news-source/a-news-article...">
-                    <input type="submit" class="btn blue lighten-3 black-text" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
-                </div>
-                </form>
-            <section>
-
-            <section class="flow-text">
-                            <p id="polarity"></p>
-                            <p id="polarity_confidence"></p>
-                            <p id="subjectivity"></p>
-                            <p id="subjectivity_confidence"></p>
-                            <p id="text"></p>
-                    </ul>
-                </section>
-        </main>
-
-        <footer class=" footer-copyright grey">
-            <h4 class="center-align">Aylien Natural Language Processing</h4>
-        </footer>
+    <body>
+    </body>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <script>
-                if ('serviceWorker' in navigator) {
-                window.addEventListener('load', () => {
-                    navigator.serviceWorker.register('/service-worker.js').then(registration =>{
-                        console.log('SW registered successfuly: ', registration);
-                    });
-                });
-                }else{
-                console.log("Service Working not supported");
-                    }
-        </script>
-
     </body>
 </html>
