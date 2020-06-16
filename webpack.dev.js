@@ -1,7 +1,6 @@
 const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const workboxPlugin = require("workbox-webpack-plugin");
 
 module.exports = {
   entry: "./src/client/index.js",
@@ -15,12 +14,7 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, "dist"),
     compress: true,
-    port: 8000,
-    setup: function (app) {
-      app.post("/article", function (req, res) {
-        res.redirect("/article");
-      });
-    },
+    port: 4000,
   },
   module: {
     rules: [
@@ -48,10 +42,6 @@ module.exports = {
       // Automatically remove all unused webpack assets on rebuild
       cleanStaleWebpackAssets: true,
       protectWebpackAssets: false,
-    }),
-    new workboxPlugin.GenerateSW({
-      clientsClaim: true,
-      skipWaiting: true,
     }),
   ],
 };

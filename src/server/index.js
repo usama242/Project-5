@@ -19,7 +19,7 @@ app.use(express.static("dist"));
 app.get("/", function (req, res) {
   res.sendFile(path.resolve("dist/index.html"));
 });
-const port = 8000;
+const port = 3000;
 // designates what port the app will listen to for incoming requests
 app.listen(port, function () {
   console.log(`The app is running on port ${port}!`);
