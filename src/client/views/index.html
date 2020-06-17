@@ -19,33 +19,35 @@
   </head>
 
   <body id="home" class="scrollspy">
-    <nav class="cyan navbar-fixed">
-      <div class="container">
-        <div class="nav-wrapper">
-          <a href="#home" class="brand-logo">Travelsite</a>
-          <a href="#" data-target="mobile-nav" class="sidenav-trigger">
-            <i class="material-icons">menu</i>
-          </a>
-          <ul class="right hide-on-med-and-down">
-            <li>
-              <a href="#home">Home</a>
-            </li>
-            <li>
-              <a href="#search">Search</a>
-            </li>
-            <li>
-              <a href="#popular">Popular Places</a>
-            </li>
-            <li>
-              <a href="#gallery">Gallery</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
-          </ul>
+    <div class="navbar-fixed">
+      <nav class="cyan navbar-fixed">
+        <div class="container">
+          <div class="nav-wrapper">
+            <a href="#home" class="brand-logo">Travelsite</a>
+            <a href="#" data-target="mobile-nav" class="sidenav-trigger">
+              <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+              <li>
+                <a href="#home">Home</a>
+              </li>
+              <li>
+                <a href="#search">Search</a>
+              </li>
+              <li>
+                <a href="#popular">Popular Places</a>
+              </li>
+              <li>
+                <a href="#gallery">Gallery</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
 
     <ul class="sidenav" id="mobile-nav">
       <li>
@@ -69,7 +71,7 @@
     <section class="slider">
       <ul class="slides">
         <li>
-          <img src="https://source.unsplash.com/1600x900/?travel" alt="" />
+          <img src="https://source.unsplash.com/1600x1200/?travel" alt="" />
           <div class="caption center-align">
             <h2>Take Your Dream Vacation</h2>
             <h5 class="light grey-text text-lighten-3 hide-on-small-only">
@@ -79,7 +81,7 @@
           </div>
         </li>
         <li>
-          <img src="https://source.unsplash.com/1600x900/?alps" alt="" />
+          <img src="https://source.unsplash.com/1600x1200/?alps" alt="" />
           <div class="caption left-align">
             <h2>Don't worry about weather</h2>
             <h5 class="light grey-text text-lighten-3 hide-on-small-only">
@@ -90,7 +92,7 @@
           </div>
         </li>
         <li>
-          <img src="https://source.unsplash.com/1600x900/?nature" alt="" />
+          <img src="https://source.unsplash.com/1600x1200/?nature" alt="" />
           <div class="caption right-align">
             <h2>Popular Destinations</h2>
             <h5 class="light grey-text text-lighten-3 hide-on-small-only">
@@ -123,14 +125,18 @@
           <div class="col s9 m3 input-field">
             <input
               type="text"
+              id="date"
               placeholder="Enter the date"
               class="datepicker white grey-text"
             />
           </div>
           <div class="col s3 m1 input-field">
-            <a class="btn-floating btn-large waves-effect waves-light pink"
-              ><i class="material-icons">search</i></a
+            <button
+              class="btn-floating btn-large waves-effect waves-light pink"
+              id="submit"
             >
+              <i class="material-icons">search</i>
+            </button>
           </div>
         </div>
       </div>
@@ -145,7 +151,7 @@
             <div class="card">
               <div class="card-image">
                 <img
-                  src="https://source.unsplash.com/1600x900/?istanbul"
+                  src="https://source.unsplash.com/1600x1200/?istanbul"
                   alt=""
                 />
                 <span class="card-title">Istanbul</span>
@@ -162,7 +168,10 @@
           <div class="col s12 m4">
             <div class="card">
               <div class="card-image">
-                <img src="https://source.unsplash.com/1600x900/?beach" alt="" />
+                <img
+                  src="https://source.unsplash.com/1600x1200/?beach"
+                  alt=""
+                />
                 <span class="card-title">The Bahamas</span>
               </div>
               <div class="card-content">
@@ -178,7 +187,7 @@
             <div class="card">
               <div class="card-image">
                 <img
-                  src="https://source.unsplash.com/1600x900/?pyramids"
+                  src="https://source.unsplash.com/1600x1200/?pyramids"
                   alt=""
                 />
                 <span class="card-title">Cairo</span>
@@ -239,98 +248,130 @@
     <section id="gallery" class="section section-gallery scrollspy">
       <div class="container">
         <h4 class="center"><span class="cyan-text">Photo </span> Gallery</h4>
-        <div class="row">
-          <div class="col s12 m3">
+        <div class="carousel valign-wrapper">
+          <a class="carousel-item" href="#"
+            ><img src="https://source.unsplash.com/1600x1200/?beach"
+          /></a>
+          <a class="carousel-item" href="#"
+            ><img src="https://source.unsplash.com/1600x1200/?travel"
+          /></a>
+          <a class="carousel-item" href="#"
+            ><img src="https://source.unsplash.com/1600x1200/?beach, travel"
+          /></a>
+          <a class="carousel-item" href="#"
+            ><img src="https://source.unsplash.com/1600x1200/?nature"
+          /></a>
+          <a class="carousel-item" href="#"
+            ><img src="https://source.unsplash.com/1600x1200/?nature, travel"
+          /></a>
+          <a class="carousel-item" href="#"
+            ><img src="https://source.unsplash.com/1600x1200/?desert"
+          /></a>
+          <a class="carousel-item" href="#"
+            ><img src="https://source.unsplash.com/1600x1200/?desert, travel"
+          /></a>
+          <a class="carousel-item" href="#"
+            ><img src="https://source.unsplash.com/1600x1200/?mountain"
+          /></a>
+          <a class="carousel-item" href="#"
+            ><img src="https://source.unsplash.com/1600x1200/?city"
+          /></a>
+          <a class="carousel-item" href="#"
+            ><img src="https://source.unsplash.com/1600x1200/?city, travel"
+          /></a>
+        </div>
+        <!-- <div class="row">
+          <div class="col s12 m6 l3">
             <img
               class="materialboxed responsive-img"
-              src="https://source.unsplash.com/1600x900/?beach"
+              src="https://source.unsplash.com/1600x1200/?beach"
               alt=""
             />
           </div>
-          <div class="col s12 m3">
+          <div class="col s12 m6 l3">
             <img
               class="materialboxed responsive-img"
-              src="https://source.unsplash.com/1600x900/?travel"
+              src="https://source.unsplash.com/1600x1200/?travel"
               alt=""
             />
           </div>
-          <div class="col s12 m3">
+          <div class="col s12 m6 l3">
             <img
               class="materialboxed responsive-img"
-              src="https://source.unsplash.com/1600x900/?nature"
+              src="https://source.unsplash.com/1600x1200/?nature"
               alt=""
             />
           </div>
-          <div class="col s12 m3">
+          <div class="col s12 m6 l3">
             <img
               class="materialboxed responsive-img"
-              src="https://source.unsplash.com/1600x900/?beach, travel"
+              src="https://source.unsplash.com/1600x1200/?beach, travel"
               alt=""
             />
           </div>
         </div>
 
         <div class="row">
-          <div class="col s12 m3">
+          <div class="col s12 m6 l3">
             <img
               class="materialboxed responsive-img"
-              src="https://source.unsplash.com/1600x900/?beaches"
+              src="https://source.unsplash.com/1600x1200/?beaches"
               alt=""
             />
           </div>
-          <div class="col s12 m3">
+          <div class="col s12 m6 l3">
             <img
               class="materialboxed responsive-img"
-              src="https://source.unsplash.com/1600x900/?traveling"
+              src="https://source.unsplash.com/1600x1200/?traveling"
               alt=""
             />
           </div>
-          <div class="col s12 m3">
+          <div class="col s12 m6 l3">
             <img
               class="materialboxed responsive-img"
-              src="https://source.unsplash.com/1600x900/?bridge"
+              src="https://source.unsplash.com/1600x1200/?bridge"
               alt=""
             />
           </div>
-          <div class="col s12 m3">
+          <div class="col s12 m6 l3">
             <img
               class="materialboxed responsive-img"
-              src="https://source.unsplash.com/1600x900/?boat, travel"
+              src="https://source.unsplash.com/1600x1200/?boat, travel"
               alt=""
             />
           </div>
         </div>
 
         <div class="row">
-          <div class="col s12 m3">
+          <div class="col s12 m6 l3">
             <img
               class="materialboxed responsive-img"
-              src="https://source.unsplash.com/1600x900/?water"
+              src="https://source.unsplash.com/1600x1200/?water"
               alt=""
             />
           </div>
-          <div class="col s12 m3">
+          <div class="col s12 m6 l3">
             <img
               class="materialboxed responsive-img"
-              src="https://source.unsplash.com/1600x900/?building"
+              src="https://source.unsplash.com/1600x1200/?building"
               alt=""
             />
           </div>
-          <div class="col s12 m3">
+          <div class="col s12 m6 l3">
             <img
               class="materialboxed responsive-img"
-              src="https://source.unsplash.com/1600x900/?trees"
+              src="https://source.unsplash.com/1600x1200/?trees"
               alt=""
             />
           </div>
-          <div class="col s12 m3">
+          <div class="col s12 m6 l3">
             <img
               class="materialboxed responsive-img"
-              src="https://source.unsplash.com/1600x900/?cruise"
+              src="https://source.unsplash.com/1600x1200/?cruise"
               alt=""
             />
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
 

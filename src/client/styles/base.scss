@@ -19,8 +19,11 @@
   margin: 5px 10px;
 }
 
-.section-contact h5 {
-  margin-bottom: 30px;
+.section-contact {
+  margin: 70px 0px;
+  h5 {
+    margin: 30px;
+  }
 }
 
 .datepicker-date-display {
@@ -34,4 +37,15 @@
 }
 .datepicker-table td.is-selected {
   background-color: #00bcd4;
+}
+
+@media only screen and (max-width: 400px) {
+  .carousel .carousel-item {
+    min-width: 80% !important;
+  }
+}
+@media only screen and (min-width: 401px) {
+  .carousel .carousel-item {
+    min-width: 500px !important;
+  }
 }

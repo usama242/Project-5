@@ -21,4 +21,8 @@ $(document).ready(function () {
     minLength: 3,
     limit: 10,
   });
+  // Carousel
+  $(".carousel").carousel({
+    numVisible: 7,
+  });
 });
