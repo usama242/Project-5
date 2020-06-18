@@ -8,6 +8,7 @@ const button = submit.addEventListener("click", (e) => {
   e.preventDefault();
   const destination = input.value;
   const dep_date = dep_input.value;
+  console.log(JSON.stringify(destination));
   fetch("http://localhost:3000/city", {
     method: "POST",
     mode: "cors",
