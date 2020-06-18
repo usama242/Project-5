@@ -32,4 +32,3 @@ const button = submit.addEventListener("click", (e) => {
     })
     .catch((error) => console.log(error));
 });
-export { button };

@@ -7,6 +7,7 @@ const pixabay_api_key = process.env.PIXABAY_API_KEY;
 const weather_api_key = process.env.WEATHER_API_KEY;
 const geoNamesURL = "http://api.geonames.org/searchJSON?q=";
 const weatherURL = "http://api.weatherbit.io/v2.0/forecast/daily?";
+const pixabayURL = "https://pixabay.com/api/?";
 const usernamekey = process.env.USERNAMEKEY;
 
 const getCityCoordinates = async (req, res) => {
@@ -21,6 +22,9 @@ const getCityCoordinates = async (req, res) => {
     cityData.latitude = response.geonames[0].lat;
     cityData.longitude = response.geonames[0].lng;
     cityData.country = response.geonames[0].countryName;
+
+    cityData.photo = await getPhoto(destination, cityData.country);
+
     console.log(cityData);
     res.send(cityData); // since the data is sent across server to client side. The return statement won't work
   } catch (error) {
@@ -46,8 +50,32 @@ const getWeather = async (req, res) => {
       weather.description = day.weather.description;
       weatherData.push(weather);
     });
-    console.log(weatherData);
     res.send(weatherData);
+  } catch (error) {
+    console.log("error", error);
+  }
+};
+
+const getPhoto = async (city, country) => {
+  city = city.split(" ").join("+"); // Pixabay api expects spaces to be replaced with +
+  country = country.split(" ").join("+");
+  const result = await fetch(
+    pixabayURL + "key=" + pixabay_api_key + "&q=" + city + "&image_type=photo"
+  );
+  try {
+    const response = await result.json();
+    if (response.totalHits === 0) {
+      response = await fetch(
+        pixabayURL +
+          "key=" +
+          pixabay_api_key +
+          "&q=" +
+          country +
+          "&image_type=photo"
+      );
+    }
+    const photoData = response.hits[0].largeImageURL;
+    return photoData;
   } catch (error) {
     console.log("error", error);
   }
