@@ -1,4 +1,5 @@
 const cities = require("./cities.json");
+
 $(document).ready(function () {
   // Init Side nav
   $(".sidenav").sidenav();
