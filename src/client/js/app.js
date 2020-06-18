@@ -5,6 +5,8 @@ const input = document.getElementById("autocomplete-input");
 const submit = document.getElementById("submit");
 const start_input = document.getElementById("start_date");
 const finish_input = document.getElementById("finish_date");
+const popular = document.getElementById("popular");
+const popular_header = document.getElementById("popular_header");
 
 const button = submit.addEventListener("click", (e) => {
   e.preventDefault();
@@ -21,8 +23,14 @@ const button = submit.addEventListener("click", (e) => {
   })
     .then((res) => res.json())
     .then((res) => {
-      console.log(res);
       const query = res[0];
+      popular_header.innerHTML = "Points of Interest";
+      const popular_places = res[1].results
+        .map((place) => place.name)
+        .forEach(
+          (point) =>
+            (popular.innerHTML += `<li class="collection-item flow-text">${point}</li>`)
+        );
       addElements(query, destination, start, finish);
       fetch(`http://localhost:${port}/weather`, {
         method: "POST",
@@ -34,9 +42,9 @@ const button = submit.addEventListener("click", (e) => {
       })
         .then((res) => res.json())
         .then((res) => {
-          console.log(res);
           addWeather(res, start, finish);
         });
     })
     .catch((error) => console.log(error));
 });
+export { button };

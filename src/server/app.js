@@ -12,6 +12,8 @@ const weatherURL = "http://api.weatherbit.io/v2.0/forecast/daily?";
 const pixabayURL = "https://pixabay.com/api/?";
 const googleURL =
   "https://maps.googleapis.com/maps/api/place/textsearch/json?query=";
+const googlePhotoURL =
+  "https://maps.googleapis.com/maps/api/place/textsearch/json?query=";
 
 const getCityCoordinates = async (req, res) => {
   const destination = req.body.destination;
@@ -90,6 +92,18 @@ const getPhoto = async (city, country) => {
 };
 
 const google = async (city) => {
+  const result = await fetch(
+    googleURL + city + "+point+of+interest&language=en&key=" + google_api_key
+  );
+  try {
+    const response = await result.json();
+    return response;
+  } catch (error) {
+    console.log("error", error);
+  }
+};
+
+const googlePhoto = async (city) => {
   const result = await fetch(
     googleURL + city + "+point+of+interest&language=en&key=" + google_api_key
   );
