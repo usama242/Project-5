@@ -12,6 +12,7 @@ $(document).ready(function () {
   });
   // Init Scrollspy
   $(".scrollspy").scrollSpy();
+  // Init Datepicker
   $(".datepicker").datepicker({
     minDate: new Date(),
   });
