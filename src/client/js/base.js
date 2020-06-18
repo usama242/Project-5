@@ -16,6 +16,7 @@ $(document).ready(function () {
   // Init Datepicker
   $(".datepicker").datepicker({
     minDate: new Date(),
+    format: "yyyy-mm-dd",
   });
   // Autocomplete
   $(".autocomplete").autocomplete({
