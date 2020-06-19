@@ -1,0 +1,48 @@
+.slider .btn {
+  margin-top: 20px;
+}
+
+.search-input input {
+  padding: 5px;
+  font-size: 18px;
+  width: 80%;
+  border: #f4f4f4 3px solid !important;
+}
+
+.dateinput input {
+  padding: 5px;
+  border: #f4f4f4 3px solid;
+}
+
+.autocomplete-content {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+
+.section-follow .fa-4x {
+  margin: 5px 10px;
+}
+
+.section-contact {
+  margin: 70px 0px;
+  h5 {
+    margin: 30px;
+  }
+}
+
+.search-input {
+  text-align: center;
+  padding: 10px;
+}
+
+#autocomplete-input {
+  width: 80%;
+}
+
+.row {
+  display: flex;
+  margin: 0;
+  padding: 10px;
+  justify-content: space-evenly;
+}

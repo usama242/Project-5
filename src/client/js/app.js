@@ -27,10 +27,7 @@ const button = submit.addEventListener("click", (e) => {
       popular_header.innerHTML = "Points of Interest";
       const popular_places = res[1].results
         .map((place) => place.name)
-        .forEach(
-          (point) =>
-            (popular.innerHTML += `<li class="collection-item flow-text">${point}</li>`)
-        );
+        .forEach((point) => (popular.innerHTML += `<li>${point}</li>`));
       addElements(query, destination, start, finish);
       fetch(`http://localhost:${port}/weather`, {
         //chaining promises
