@@ -26,15 +26,8 @@ const addWeather = (data, start, finish) => {
     theDate.setDate(theDate.getDate() + 1);
   }
   dates = [...dates, finish];
-  const date_string = [];
-  const date_formater = dates.forEach((date) => {
-    const dateString = new Date(
-      date.getTime() - date.getTimezoneOffset() * 60000
-    )
-      .toISOString()
-      .split("T")[0];
-    date_string.push(dateString);
-  });
+  const date_string = dateFormatter(dates);
+
   const filtered = data.filter((entry) =>
     JSON.stringify(date_string).includes(JSON.stringify(entry.date))
       ? true
@@ -54,4 +47,16 @@ const addWeather = (data, start, finish) => {
   });
 };
 
-export { addElements, addWeather };
+const dateFormatter = (dates) => {
+  const date_string = [];
+  dates.forEach((date) => {
+    const dateString = new Date(
+      date.getTime() - date.getTimezoneOffset() * 60000
+    )
+      .toISOString()
+      .split("T")[0];
+    date_string.push(dateString);
+  });
+  return date_string;
+};
+export { addElements, addWeather, dateFormatter };
