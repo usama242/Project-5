@@ -33,6 +33,7 @@ const button = submit.addEventListener("click", (e) => {
         );
       addElements(query, destination, start, finish);
       fetch(`http://localhost:${port}/weather`, {
+        //chaining promises
         method: "POST",
         mode: "cors",
         headers: {

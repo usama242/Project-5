@@ -1,4 +1,4 @@
-const cities = require("./cities.json");
+const cities = require("../json/cities.json");
 
 $(document).ready(function () {
   // Init Side nav

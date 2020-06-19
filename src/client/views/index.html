@@ -371,6 +371,15 @@
     </footer>
 
     <!--Import jQuery before materialize.js-->
+    <script>
+      // Check that service workers are supported
+      if ("serviceWorker" in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/service-worker.js");
+        });
+      }
+    </script>
     <script
       type="text/javascript"
       src="https://code.jquery.com/jquery-3.2.1.min.js"
