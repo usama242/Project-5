@@ -1,5 +1,5 @@
 # Udacity Project 5:
-
+# For Plain Vanilla version and tests. Checkout to Vanilla version branch
 # Travel Website
 
 - This website asks user to input a the date and destination they want to travel and the website retrieves weather forecast as well as photos of that place. It also retrieves Places of Interest.
