@@ -1,4 +1,7 @@
 // client-side function
+const google_api_key = process.env.GOOGLE_API_KEY;
+const googleURL =
+  "https://maps.googleapis.com/maps/api/place/textsearch/json?query=";
 const dateFormatter = (dates) => {
   const date_string = [];
   dates.forEach((date) => {
