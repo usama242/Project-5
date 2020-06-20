@@ -1,5 +1,14 @@
 # Udacity Project 5:
 
+# Please use this commit while evaluating
+
+# Don't forget to create a .env file and enter following api keys
+
+- PIXABAY_API_KEY (Pixabay API)
+- WEATHER_API_KEY (Weatherbit API)
+- USERNAMEKEY (Geonames API)
+- GOOGLE_API_KEY (google places API)
+
 # Travel Website
 
 - This website asks user to input a the date and destination they want to travel and the website retrieves weather forecast as well as photos of that place. It also retrieves Places of Interest.
