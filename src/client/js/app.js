@@ -25,6 +25,7 @@ const button = submit.addEventListener("click", (e) => {
     .then((res) => {
       const query = res[0];
       popular_header.innerHTML = "Points of Interest";
+      popular.innerHTML = "";
       const popular_places = res[1].results
         .map((place) => place.name)
         .forEach(

@@ -1,5 +1,11 @@
 # Udacity Project 5:
+
 # For Plain Vanilla version and tests. Checkout to Vanilla version branch
+
+## API Key _!Important_
+
+This app uses environmental variables to protect the private keys. The API key & Id must be obtained before running the app. You can obtain them from the following websites.
+
 # Travel Website
 
 - This website asks user to input a the date and destination they want to travel and the website retrieves weather forecast as well as photos of that place. It also retrieves Places of Interest.
@@ -35,15 +41,17 @@ Generate the dist files first and then start server at port 8000
 
 `$ npm run start`
 
+### Testing
+
+Testing is done with JEST. Run the following command for testing
+
+`$ npm run test`
+
 ## Configs
 
 There are two webpack config files for both development mode(`webpack.config.dev.js`) and production mode(`webpack.config.prod.js` )
 
 There is also a `package.json` to manage dependencies
-
-## API Key _!Important_
-
-This app uses environmental variables to protect the private keys. The API key & Id must be obtained before running the app. You can obtain them from the aforementioned website.
 
 ## Offline Functionality
 
