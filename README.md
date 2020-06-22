@@ -1,7 +1,5 @@
 # Udacity Project 5:
 
-# For Plain Vanilla version and tests. Checkout to Vanilla version branch
-
 ## API Key _!Important_
 
 This app uses environmental variables to protect the private keys. The API key & Id must be obtained before running the app. You can obtain them from the following websites.
