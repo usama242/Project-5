@@ -53,3 +53,11 @@
     min-width: 500px !important;
   }
 }
+#city_photo {
+  max-height: 600px !important;
+  margin: auto;
+  display: block;
+}
+#city_header {
+  text-transform: capitalize;
+}

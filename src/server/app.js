@@ -12,8 +12,6 @@ const weatherURL = "http://api.weatherbit.io/v2.0/forecast/daily?";
 const pixabayURL = "https://pixabay.com/api/?";
 const googleURL =
   "https://maps.googleapis.com/maps/api/place/textsearch/json?query=";
-const googlePhotoURL =
-  "https://maps.googleapis.com/maps/api/place/textsearch/json?query=";
 
 const getCityCoordinates = async (req, res) => {
   const destination = req.body.destination;
@@ -69,13 +67,13 @@ const getWeather = async (req, res) => {
 };
 
 const getPhoto = async (city, country) => {
-  const result = await fetch(
+  let result = await fetch(
     pixabayURL + "key=" + pixabay_api_key + "&q=" + city + "&image_type=photo"
   );
   try {
-    const response = await result.json();
+    let response = await result.json();
     if (response.totalHits === 0) {
-      response = await fetch(
+      result = await fetch(
         pixabayURL +
           "key=" +
           pixabay_api_key +
@@ -83,6 +81,7 @@ const getPhoto = async (city, country) => {
           country +
           "&image_type=photo"
       );
+      response = await result.json();
     }
     const photoData = response.hits[0].largeImageURL;
     return photoData;
@@ -92,18 +91,6 @@ const getPhoto = async (city, country) => {
 };
 
 const google = async (city) => {
-  const result = await fetch(
-    googleURL + city + "+point+of+interest&language=en&key=" + google_api_key
-  );
-  try {
-    const response = await result.json();
-    return response;
-  } catch (error) {
-    console.log("error", error);
-  }
-};
-
-const googlePhoto = async (city) => {
   const result = await fetch(
     googleURL + city + "+point+of+interest&language=en&key=" + google_api_key
   );
